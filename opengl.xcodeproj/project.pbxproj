@@ -40,7 +40,7 @@
 		760000772A36E36200CA5D86 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		7600007E2A36E3A300CA5D86 /* glad.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = glad.cpp; sourceTree = "<group>"; };
 		760000812A36F7C100CA5D86 /* libglfw.3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.3.dylib; path = ../../../../opt/homebrew/Cellar/glfw/3.3.8/lib/libglfw.3.3.dylib; sourceTree = "<group>"; };
-		760000982A39562A00CA5D86 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		760000992A3958B800CA5D86 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = opengl/README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +58,7 @@
 		7600006B2A36E36200CA5D86 = {
 			isa = PBXGroup;
 			children = (
+				760000992A3958B800CA5D86 /* README.md */,
 				760000812A36F7C100CA5D86 /* libglfw.3.3.dylib */,
 				760000762A36E36200CA5D86 /* opengl */,
 				760000752A36E36200CA5D86 /* Products */,
@@ -76,7 +77,6 @@
 		760000762A36E36200CA5D86 /* opengl */ = {
 			isa = PBXGroup;
 			children = (
-				760000982A39562A00CA5D86 /* README.md */,
 				760000772A36E36200CA5D86 /* main.cpp */,
 				7600007E2A36E3A300CA5D86 /* glad.cpp */,
 			);
