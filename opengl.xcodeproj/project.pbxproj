@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		760000782A36E36200CA5D86 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 760000772A36E36200CA5D86 /* main.cpp */; };
+		7600007F2A36E3A300CA5D86 /* glad.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7600007E2A36E3A300CA5D86 /* glad.cpp */; };
+		760000822A36F7C100CA5D86 /* libglfw.3.3.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 760000812A36F7C100CA5D86 /* libglfw.3.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		760000842A36F86000CA5D86 /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 760000812A36F7C100CA5D86 /* libglfw.3.3.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -20,11 +23,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		760000802A36F6DB00CA5D86 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				760000822A36F7C100CA5D86 /* libglfw.3.3.dylib in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		760000742A36E36200CA5D86 /* opengl */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = opengl; sourceTree = BUILT_PRODUCTS_DIR; };
 		760000772A36E36200CA5D86 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		7600007E2A36E3A300CA5D86 /* glad.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = glad.cpp; sourceTree = "<group>"; };
+		760000812A36F7C100CA5D86 /* libglfw.3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.3.dylib; path = ../../../../opt/homebrew/Cellar/glfw/3.3.8/lib/libglfw.3.3.dylib; sourceTree = "<group>"; };
+		760000982A39562A00CA5D86 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				760000842A36F86000CA5D86 /* libglfw.3.3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,8 +58,10 @@
 		7600006B2A36E36200CA5D86 = {
 			isa = PBXGroup;
 			children = (
+				760000812A36F7C100CA5D86 /* libglfw.3.3.dylib */,
 				760000762A36E36200CA5D86 /* opengl */,
 				760000752A36E36200CA5D86 /* Products */,
+				760000832A36F84A00CA5D86 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +76,18 @@
 		760000762A36E36200CA5D86 /* opengl */ = {
 			isa = PBXGroup;
 			children = (
+				760000982A39562A00CA5D86 /* README.md */,
 				760000772A36E36200CA5D86 /* main.cpp */,
+				7600007E2A36E3A300CA5D86 /* glad.cpp */,
 			);
 			path = opengl;
+			sourceTree = "<group>";
+		};
+		760000832A36F84A00CA5D86 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -72,6 +100,7 @@
 				760000702A36E36200CA5D86 /* Sources */,
 				760000712A36E36200CA5D86 /* Frameworks */,
 				760000722A36E36200CA5D86 /* CopyFiles */,
+				760000802A36F6DB00CA5D86 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -120,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				760000782A36E36200CA5D86 /* main.cpp in Sources */,
+				7600007F2A36E3A300CA5D86 /* glad.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +269,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = (
+					"/usr/local/include/**",
+					"/opt/homebrew/Cellar/glfw/**",
+				);
+				LIBRARY_SEARCH_PATHS = /opt/homebrew/Cellar/glfw/3.3.8/lib/libglfw.3.dylib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -247,6 +282,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = (
+					"/usr/local/include/**",
+					"/opt/homebrew/Cellar/glfw/**",
+				);
+				LIBRARY_SEARCH_PATHS = /opt/homebrew/Cellar/glfw/3.3.8/lib/libglfw.3.dylib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
